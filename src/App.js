@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import Joke from "./Joke";
 
 function App() {
   const [userQuery, setUserQuery] = useState("");
+
   const updateUserQuery = event => {
     console.log(userQuery);
     setUserQuery(event.target.value);
@@ -28,6 +30,8 @@ function App() {
         />
         <button onClick={searchQuery}>Search</button>
       </div>
+      <hr />
+      <Joke />
     </div>
   );
 }
